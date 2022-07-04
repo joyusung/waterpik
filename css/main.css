@@ -1,0 +1,541 @@
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: #111; display: block;}
+li{list-style: none;}
+img{width: 100%;}
+header,section,footer{width: 100%; float: left;}
+header, section, footer, div{box-sizing: border-box;}
+
+header{
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+header .center_box{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+}
+header .logo{
+    width: 115px;
+    height: 37px;
+    margin-top: 20px;
+    background-image: url(../img/h_logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header nav{
+    width: 700px;
+}
+header nav > ul{
+    display: flex;
+    justify-content: space-around;
+}
+header nav > ul > li{
+    flex: 1;
+}
+header nav > ul > li > a{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 80px;
+}
+header nav .sub{
+    position: relative;
+    z-index: 50;
+    display: none;
+    padding-top: 12px ;
+}
+header nav .sub li a{
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #666;
+}
+header .header_btn{
+    width: 310px;
+    margin-top: 20px;
+}
+header .header_btn ul{
+    display: flex;
+    justify-content: space-between;
+}
+header .header_btn ul li{
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+}
+header .header_btn ul li a{
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+header .header_btn ul li:first-child{
+    background-color: rgb(2, 109, 74);
+}
+header .header_btn ul li:nth-child(2){
+    background-color: rgb(138, 101, 107);
+}
+header .header_btn ul li:last-child{
+    background-color: rgb(143, 101, 143);
+}
+/* sub_bg */
+header .sub_bg{
+    width: 100%;
+    height: 272px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 40;
+    display: none;
+    background-color: #fff;
+}
+header .sub_bg:after{
+    content: "";
+    width: 30%;
+    height: 100%;
+    background-image: url(../img/gnb_bg.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    background-color: #efefef;
+}
+/* nav hover*/
+header nav ul li .sub:after{
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: blue;
+    transition: all 0.5s;
+}
+header nav ul li:hover .sub:after{
+    width: 100%;
+}
+header nav .sub li:hover a{
+    color: blue;
+}
+/* visual section */
+section.visual{
+    height: 800px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(122, 185, 209);
+}
+.swiper-slide .center_box{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+section.visual .visual_info{
+    margin-top: 150px;
+}
+section.visual .visual_info h2{
+    color: #fff;
+    font-weight: normal;
+    font-size: 26px;
+}
+section.visual .visual_info h1{
+    color: #fff;
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 30px;
+}
+section.visual .visual_info > p{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 30px;
+}
+section.visual .visual_info .btn{
+    margin-top: 50px;
+}
+section.visual .visual_info .btn a{
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #fff;
+}
+section.visual .visual_info .btn a img{
+    width: 40px;
+}
+section.visual .visual_bg{
+    width: 600px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section.visual .s1 .visual_bg{
+    background-image: url(../img/visual_p01.png);
+}
+section.visual .s2 .visual_bg{
+    background-image: url(../img/visual_p02.png);
+}
+section.visual .s3 .visual_bg{
+    background-image: url(../img/visual_p03.png);
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 50%;
+    left: 120px;
+}
+.swiper-pagination-bullet{
+    background-color: transparent;
+    border: 2px solid #fff;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+}
+.swiper-pagination-bullet-active{
+    background-color: #fff;
+}
+/* box1 section */
+section.box1{
+    height: 800px;
+}
+section.box1 .center_box{
+    width: 1200px;
+    margin: 0 auto;
+}
+section.box1 .box1_top{
+    margin-top: 100px;
+    position: relative;
+}
+section.box1 .box1_top > p{
+    text-align: center;
+    font-size: 40px;
+}
+section.box1 .box1_top .btn{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+section.box1 .box1_top .btn a{
+    width: 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+section.box1 .box1_top .btn a p{
+    word-spacing: -2px;
+}
+section.box1 .box1_top .btn a img{
+    width: 40px;
+}
+section.box1 ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+    margin-top: 80px;
+}
+section.box1 ul li .new{
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    position: relative;
+    overflow: hidden;
+}
+section.box1 ul .li1 .new{
+    background-color:pink;
+    background-image: url(../img/new1.png);
+}
+section.box1 ul .li2 .new{
+    background-color:plum;
+    background-image: url(../img/new2.png);
+}
+section.box1 ul .li3 .new{
+    background-color:beige;
+    background-image: url(../img/new3.png);
+}
+section.box1 ul li .new p{
+    width: 90px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+}
+section.box1 ul li .new .new_btn{
+    width: 100%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 400px;
+    left: 0;
+    transition: all 0.5s;
+}
+section.box1 ul li .new .new_btn a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    opacity: 0;
+    margin-top:100px;
+    transition: all 1.2s;
+}
+section.box1 ul li .new .new_btn a img{
+    width: 120px;
+    margin-top: -20px;
+}
+section.box1 ul li > p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+section.box1 ul li .new:hover .new_btn{
+    top: 0;
+}
+section.box1 ul li .new .new_btn a.active{
+    opacity: 1;
+    margin-top: 0;
+}
+/* box2 section */
+section.box2{
+    height: 700px;
+    background-color: #eee;
+}
+section.box2 .center_box{
+    width: 1200px;
+    margin: 0 auto;
+}
+section.box2 h1{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+}
+section.box2 p{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+}
+section.box2 ul{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
+}
+/* box3 section */
+section.box3{
+    height: 550px;
+}
+section.box3 ul{
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 100px;
+}
+section.box3 ul li{
+    border: 2px solid #eee;
+    position: relative;
+}
+section.box3 ul li .circle{
+    width: 80px;
+    height: 80px;
+    border: 2px solid #eee;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+section.box3 ul li .circle img{
+    width: 50px;
+}
+section.box3 ul li p{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 60px;
+}
+section.box3 ul li h1{
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+}
+section.box3 ul li a > img{
+    margin-top: 30px;
+    margin-bottom: -4px;
+}
+/* box4 section */
+section.box4{
+    height: 640px;
+    position: relative;
+}
+section.box4 .box4_bg{
+    width: 100%;
+    height: 640px;
+    display: grid;
+    grid-template-columns: 1fr 750px;
+    position: absolute;
+    z-index: -10;
+}
+section.box4 .box4_left_bg{
+    background-color: #333;
+}
+section.box4 .map{
+    background-image: url(../img/map.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section.box4 .center_box{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+}
+section.box4 .info{
+    width: 600px;
+}
+section.box4 .info h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+section.box4 .info h1{
+    color: #fff;
+    font-size: 50px;
+    line-height: 50px;
+}
+section.box4 .info h1 span{
+    font-size: 18px;
+}
+section.box4 .info .box{
+    margin-top: 50px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+}
+section.box4 .info .box1{
+    float: left;
+    margin-right: 30px;
+}
+section.box4 .input{
+    width: 700px;
+    height: 550px;
+    background-color: #666;
+    padding: 30px;
+}
+section.box4 .input .input_box{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 60px 60px 60px 60px 140px;
+    grid-template-areas: "product1 product2"
+                         "name call"
+                         "email email"
+                         "day day"
+                         "content content";
+    gap: 10px;
+}
+#product1{grid-area: product1;}
+#product2{grid-area: product2;}
+.name{grid-area: name;}
+.call{grid-area: call;}
+.email{grid-area: email;}
+.day{grid-area: day;}
+.content{grid-area: content;}
+section.box4 .input input{
+    padding: 20px;
+}
+section.box4 .input select{
+    padding: 20px;
+}
+section.box4 .input input:focus{
+    outline: none;
+}
+section.box4 .input a{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    float: right;
+    margin-top: 20px;
+}
+section.box4 .input a img{
+    width: 50px;
+    margin-right: 10px;
+}
+/* footer */
+footer{
+    height: 200px;
+}
+footer .center_box{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+footer .icon{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+footer .icon .sns ul{
+    display: flex;
+    justify-content: space-between;
+}
+footer .icon .sns ul li{
+    flex: 1;
+    margin: 10px;
+}
+footer .info{
+    margin-top: 10px;
+}
+footer .info address{
+    font-style: normal;
+    font-size: 18px;
+    color: #666;
+}
+footer .info p{
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+footer .as p{
+    position: relative;
+    margin-bottom: 5px;
+}
+footer .as p:after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/f_tel_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -10px;
+    left:-30px;
+}
